@@ -1,11 +1,470 @@
-html<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>My First Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The New Parent Path System - Transform Overwhelming Into Organized</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+            padding: 60px 40px;
+            text-align: center;
+            color: #2c3e50;
+        }
+        
+        .hero h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero .subheader {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .hero .cta-primary {
+            background: #e74c3c;
+            color: white;
+            padding: 18px 40px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+        }
+        
+        .hero .cta-primary:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+        }
+        
+        .section {
+            padding: 50px 40px;
+        }
+        
+        .section h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: #2c3e50;
+            text-align: center;
+        }
+        
+        .problem {
+            background: #fff5f5;
+            border-left: 5px solid #e74c3c;
+        }
+        
+        .problem ul {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .problem li {
+            padding: 10px 0;
+            font-size: 1.1em;
+        }
+        
+        .problem li::before {
+            content: "😰 ";
+            margin-right: 10px;
+        }
+        
+        .solution {
+            background: #f0fff4;
+            border-left: 5px solid #27ae60;
+        }
+        
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .benefit-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .benefit-card .icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        
+        .benefit-card h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .social-proof {
+            background: #f8f9fa;
+            text-align: center;
+        }
+        
+        .testimonial {
+            background: white;
+            padding: 30px;
+            margin: 20px auto;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            font-style: italic;
+            position: relative;
+        }
+        
+        .testimonial::before {
+            content: '"';
+            font-size: 4em;
+            color: #bdc3c7;
+            position: absolute;
+            top: -10px;
+            left: 20px;
+        }
+        
+        .testimonial-author {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .pricing {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .pricing h2 {
+            color: white;
+        }
+        
+        .price-box {
+            background: white;
+            color: #2c3e50;
+            padding: 40px;
+            border-radius: 15px;
+            margin: 30px auto;
+            max-width: 400px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .original-price {
+            text-decoration: line-through;
+            color: #95a5a6;
+            font-size: 1.2em;
+        }
+        
+        .current-price {
+            font-size: 3em;
+            font-weight: bold;
+            color: #e74c3c;
+            margin: 20px 0;
+        }
+        
+        .objections {
+            background: #fff8e1;
+        }
+        
+        .objection-item {
+            margin: 30px 0;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .objection-q {
+            font-weight: bold;
+            color: #f39c12;
+            margin-bottom: 10px;
+        }
+        
+        .final-cta {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 60px 40px;
+        }
+        
+        .cta-secondary {
+            background: #27ae60;
+            color: white;
+            padding: 15px 35px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1em;
+            cursor: pointer;
+            margin: 10px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-secondary:hover {
+            background: #229954;
+            transform: translateY(-2px);
+        }
+        
+        .guarantee {
+            background: #e8f5e8;
+            border: 2px dashed #27ae60;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .guarantee h3 {
+            color: #27ae60;
+            margin-bottom: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+            
+            .section {
+                padding: 30px 20px;
+            }
+            
+            .hero {
+                padding: 40px 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My Website!</h1>
-    <p>This is my first GitHub Pages website.</p>
-    <p>It's working!</p>
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>Stop Drowning in New Parent Chaos<br>Start Following Your Clear Path Forward</h1>
+            <p class="subheader">The New Parent Path System™ transforms 9 months of overwhelming decisions into organized, step-by-step guidance you can actually follow</p>
+            <a href="#pricing" class="cta-primary">Get Your Path System Now - $37</a>
+        </div>
+
+        <!-- Problem Section -->
+        <div class="section problem">
+            <h2>If You're Expecting or Just Had a Baby, You're Probably Feeling...</h2>
+            <ul>
+                <li><strong>Completely overwhelmed</strong> by endless baby gear lists, conflicting advice, and "must-do" recommendations</li>
+                <li><strong>Analysis paralysis</strong> from trying to research every single decision while exhausted</li>
+                <li><strong>Anxiety about missing something important</strong> that could affect your baby's development</li>
+                <li><strong>Frustrated by generic advice</strong> that doesn't fit your specific situation or values</li>
+                <li><strong>Isolated and unsupported</strong> in making decisions that feel impossibly important</li>
+                <li><strong>Guilt about not being "prepared enough"</strong> despite reading everything you can find</li>
+            </ul>
+            <p style="font-size: 1.2em; margin-top: 30px; font-weight: bold; color: #e74c3c;">You're not failing. The system is broken. There's just too much information and not enough organization.</p>
+        </div>
+
+        <!-- Solution Section -->
+        <div class="section solution">
+            <h2>What If You Had a Clear, Step-by-Step Path Instead?</h2>
+            <p style="font-size: 1.2em; margin-bottom: 30px;">The New Parent Path System™ is the first comprehensive guide that organizes everything you need to know into a clear, manageable timeline you can actually follow.</p>
+            
+            <div class="benefits">
+                <div class="benefit-card">
+                    <div class="icon">📋</div>
+                    <h3>Month-by-Month Action Plans</h3>
+                    <p>Know exactly what to focus on when, without overwhelm or decision fatigue</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="icon">🎯</div>
+                    <h3>Priority Matrix Templates</h3>
+                    <p>Distinguish between "nice to have" and "actually essential" so you can focus your energy wisely</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="icon">⚡</div>
+                    <h3>Quick Decision Frameworks</h3>
+                    <p>Make confident choices in minutes instead of hours of research</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="icon">🏠</div>
+                    <h3>Preparation Checklists</h3>
+                    <p>Actually get ready without forgetting important details or over-preparing unnecessarily</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="icon">🤱</div>
+                    <h3>Postpartum Reality Plans</h3>
+                    <p>Prepare for the fourth trimester with realistic expectations and support systems</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="icon">💰</div>
+                    <h3>Budget-Smart Guides</h3>
+                    <p>Avoid expensive mistakes and focus spending on what actually matters</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Social Proof Section -->
+        <div class="section social-proof">
+            <h2>What Parents Are Saying</h2>
+            
+            <div class="testimonial">
+                <p>"I wish I had this with my first baby. This system would have saved me months of anxiety and hundreds of dollars on things I never actually needed. Finally, someone organized all the chaos into something I could actually follow."</p>
+                <div class="testimonial-author">- Sarah M., Mom of 2</div>
+            </div>
+            
+            <div class="testimonial">
+                <p>"My partner and I were constantly arguing about baby preparations because we both had different 'research' and priorities. This system gave us one clear path to follow together. It literally saved our sanity and our relationship during a stressful time."</p>
+                <div class="testimonial-author">- Jessica & Mike, New Parents</div>
+            </div>
+            
+            <div class="testimonial">
+                <p>"As a working mom, I needed something efficient. This isn't another 200-page book to read when I'm exhausted. It's actual step-by-step guidance I can follow even when my brain is mush. Pure gold."</p>
+                <div class="testimonial-author">- Amanda K., Marketing Director & Mom</div>
+            </div>
+        </div>
+
+        <!-- What You Get Section -->
+        <div class="section">
+            <h2>Everything Included in Your New Parent Path System™</h2>
+            <div style="text-align: left; max-width: 600px; margin: 0 auto;">
+                <h3 style="color: #e74c3c; margin: 30px 0 15px 0;">📚 Core Path System (Value: $127)</h3>
+                <ul style="margin-left: 20px;">
+                    <li>Month-by-month preparation timeline (pregnancy through first year)</li>
+                    <li>Essential vs. optional decision trees for every major choice</li>
+                    <li>Quick-reference action checklists for each phase</li>
+                    <li>Budget planning templates with realistic cost breakdowns</li>
+                </ul>
+                
+                <h3 style="color: #e74c3c; margin: 30px 0 15px 0;">🎯 Decision-Making Frameworks (Value: $47)</h3>
+                <ul style="margin-left: 20px;">
+                    <li>The 5-Minute Baby Gear Decision Matrix</li>
+                    <li>Childcare Option Comparison Templates</li>
+                    <li>Healthcare Decision Trees</li>
+                    <li>Emergency Preparedness Quick-Planners</li>
+                </ul>
+                
+                <h3 style="color: #e74c3c; margin: 30px 0 15px 0;">💡 Bonus Resources (Value: $67)</h3>
+                <ul style="margin-left: 20px;">
+                    <li>Partner Communication Templates (avoid arguments!)</li>
+                    <li>Family & Friends Boundary Scripts</li>
+                    <li>Postpartum Support System Builder</li>
+                    <li>Return-to-Work Transition Planner</li>
+                </ul>
+                
+                <div style="text-align: center; margin: 40px 0;">
+                    <p style="font-size: 1.3em;"><strong>Total Value: $241</strong></p>
+                    <p style="font-size: 1.5em; color: #e74c3c;"><strong>Your Investment Today: Just $37</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pricing Section -->
+        <div class="section pricing" id="pricing">
+            <h2>Get Your New Parent Path System™ Today</h2>
+            <div class="price-box">
+                <div class="original-price">Regular Price: $67</div>
+                <div class="current-price">$37</div>
+                <p style="margin: 20px 0;"><strong>Founder's Pricing - Limited Time</strong></p>
+                <a href="#" class="cta-primary">Download Instantly - $37</a>
+                
+                <div class="guarantee">
+                    <h3>🛡️ 60-Day Money-Back Guarantee</h3>
+                    <p>If this system doesn't save you time, reduce your stress, and give you confidence in your new parent journey, get your money back. No questions asked.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Objections Section -->
+        <div class="section objections">
+            <h2>But What If...</h2>
+            
+            <div class="objection-item">
+                <div class="objection-q">Q: "I'm not sure if this will work for my specific situation..."</div>
+                <p><strong>A:</strong> This system is built on universal principles but includes customization guides for different family situations, budgets, and values. Plus, you're covered by our 60-day guarantee.</p>
+            </div>
+            
+            <div class="objection-item">
+                <div class="objection-q">Q: "I don't have time to go through another long course or program..."</div>
+                <p><strong>A:</strong> This isn't a course - it's a reference system. You can start using it immediately and reference only what you need, when you need it. Most parents see results in the first week.</p>
+            </div>
+            
+            <div class="objection-item">
+                <div class="objection-q">Q: "What if I'm already several months pregnant? Is it too late?"</div>
+                <p><strong>A:</strong> Not at all! The system includes "catch-up" guides for every stage, plus the decision-making frameworks work no matter where you are in your journey.</p>
+            </div>
+            
+            <div class="objection-item">
+                <div class="objection-q">Q: "Is this just another generic baby guide?"</div>
+                <p><strong>A:</strong> Absolutely not. This is specifically designed as a <em>system</em> for organized, step-by-step guidance. It's the difference between a map and a GPS - one shows you the terrain, the other tells you exactly where to go next.</p>
+            </div>
+        </div>
+
+        <!-- Final CTA Section -->
+        <div class="final-cta">
+            <h2>Ready to Transform Chaos Into Clarity?</h2>
+            <p style="font-size: 1.2em; margin: 30px 0;">Stop spending hours researching every decision. Stop feeling overwhelmed by conflicting advice. Stop worrying you're missing something important.</p>
+            <p style="font-size: 1.2em; margin: 30px 0;"><strong>Start following your clear path forward.</strong></p>
+            
+            <a href="#" class="cta-primary" style="margin: 20px;">Get Instant Access - $37</a>
+            <br>
+            <a href="#" class="cta-secondary">Questions? See FAQ</a>
+            <a href="#" class="cta-secondary">Preview Sample Pages</a>
+            
+            <p style="margin-top: 40px; opacity: 0.8;">⚡ Instant digital download • 💳 Secure checkout • 🛡️ 60-day guarantee</p>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Simple analytics tracking (replace with your tracking code)
+        document.querySelectorAll('.cta-primary, .cta-secondary').forEach(button => {
+            button.addEventListener('click', function() {
+                console.log('CTA clicked:', this.textContent);
+                // Add your conversion tracking here
+            });
+        });
+    </script>
 </body>
 </html>
